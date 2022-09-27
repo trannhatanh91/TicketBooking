@@ -22,7 +22,13 @@ In the project root, JHipster generates configuration files for tools like git, 
 
 ## Development
 
-Before you can build this project, you must install and configure the following dependencies on your machine:
+Before you can build this project, you must install and configure the following dependencies on your machine: 0. [Postgres][]: We use postgres as database for development
+
+```html
+<script>
+  docker run -d --name ticket-booking-postgres -e POSTGRES_PASSWORD={Password} -e POSTGRES_DB=TicketBooking -v {RootDirectory}/TicketBooking/postgres-data:/var/lib/postgresql/data -p 5432:5432 --network ticket-booking-network postgres
+</script>
+```
 
 1. [Node.js][]: We use Node to run a development web server and build the project.
    Depending on your system, you can install Node either from source or as a pre-packaged bundle.
